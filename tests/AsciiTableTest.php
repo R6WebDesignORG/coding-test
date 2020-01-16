@@ -54,7 +54,7 @@ class AsciiTableTest extends TestCase
 |-----------------------------------------|
 OUTPUT;
 
-        $this->assertEquals($expected, getAsciiTable($input));
+        $this->assertEqualsClean($expected, getAsciiTable($input));
     }
 
     public function testOneColumn()
@@ -85,7 +85,7 @@ OUTPUT;
 |-----------|
 OUTPUT;
 
-        $this->assertEquals($expected, getAsciiTable($input));
+        $this->assertEqualsClean($expected, getAsciiTable($input));
     }
 
     public function testOneRow()
@@ -107,6 +107,6 @@ OUTPUT;
 |------------------------------------------|
 OUTPUT;
 
-        $this->assertEquals($expected, getAsciiTable($input));
+        $this->assertEqualsClean($expected, getAsciiTable($input));
     }
 }
